@@ -50,7 +50,7 @@
                     {{-- ===== SECTION: Informasi Dasar ===== --}}
                     <div class="cp-card mb-4">
                         <h5 style="margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
-                            <span style="font-size:1.3rem;">📋</span> Informasi Dasar
+                            <span style="font-size:1.3rem;"></span> Informasi Dasar
                         </h5>
 
                         {{-- Judul --}}
@@ -85,9 +85,9 @@
                                 </option>
                                 @foreach ($categories as $cat)
                                     <option value="{{ $cat }}" {{ old('category') === $cat ? 'selected' : '' }}>
-                                        @if ($cat === 'Pastry') 🥐
-                                        @elseif ($cat === 'Cookies') 🍪
-                                        @else 🌿
+                                        @if ($cat === 'Pastry') 
+                                        @elseif ($cat === 'Cookies') 
+                                        @else 
                                         @endif
                                         {{ $cat }}
                                     </option>
@@ -104,7 +104,7 @@
                     {{-- ===== SECTION: Gambar ===== --}}
                     <div class="cp-card mb-4">
                         <h5 style="margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
-                            <span style="font-size:1.3rem;">🖼️</span> Gambar Resep
+                            <span style="font-size:1.3rem;"></span> Gambar Resep
                         </h5>
 
                         <div class="mb-2">
@@ -136,7 +136,7 @@
                     {{-- ===== SECTION: Bahan-Bahan ===== --}}
                     <div class="cp-card mb-4">
                         <h5 style="margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem;">
-                            <span style="font-size:1.3rem;">🧂</span> Bahan-Bahan
+                            <span style="font-size:1.3rem;"></span> Bahan-Bahan
                             <span style="color:var(--cp-pink-dark);">*</span>
                         </h5>
                         <p class="form-hint mb-3">Tulis satu bahan per baris. Untuk sub-judul (misal: "— SELAI —"), awali dengan tanda "—".</p>
@@ -156,7 +156,7 @@
                     {{-- ===== SECTION: Cara Membuat ===== --}}
                     <div class="cp-card mb-4">
                         <h5 style="margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem;">
-                            <span style="font-size:1.3rem;">👩‍🍳</span> Cara Membuat
+                            <span style="font-size:1.3rem;"></span> Cara Membuat
                             <span style="color:var(--cp-pink-dark);">*</span>
                         </h5>
                         <p class="form-hint mb-3">Tulis satu langkah per baris. Awali tiap langkah dengan nomor (misal: "1. ...") atau langsung tuliskan langkahnya.</p>

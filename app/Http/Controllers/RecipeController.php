@@ -9,15 +9,7 @@ use Illuminate\View\View;
 
 class RecipeController extends Controller
 {
-    /**
-     * GET /recipes
-     * Halaman Home — daftar resep dengan Search + Filter Kategori.
-     *
-     * Query params yang didukung:
-     *   ?search=croissant          → cari berdasarkan judul
-     *   ?category=Pastry           → filter berdasarkan kategori
-     *   Keduanya bisa dikombinasikan: ?search=kue&category=Cookies
-     */
+
     public function index(Request $request): View
     {
         $query = Recipe::query()->latest();

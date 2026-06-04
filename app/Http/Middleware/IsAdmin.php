@@ -10,12 +10,10 @@ class IsAdmin
 {
     public function handle(Request $request, Closure $next): Response
     {
-        // Cek apakah user sudah login DAN rolenya adalah 'admin'
-        if (auth()->check() && auth()->user()->role === 'admin') {
-            return $next($request);
+        if (!auth()->check() || auth()->user()->role !== 'admin') {
+            abort(403, 'Akses ditolak. Hanya admin yang dapat mengelola resep.');
         }
 
-        // Jika bukan admin, tendang dengan error 403
-        abort(403, 'Akses Ditolak. Hanya Admin CakePedia yang dapat mengelola resep.');
+        return $next($request);
     }
 }
